@@ -1,0 +1,102 @@
+.skills {
+  padding: 3rem;
+  background-color: #eaeef1; /* Softer background for better contrast */
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2C3E50; /* A darker color for strong contrast */
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-category {
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+/* Enhanced hover effect for category blocks */
+.skills-category:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(145deg, #dce6ef, #f9f9f9); /* Lighter hover background */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skills-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(30, 144, 255, 0.1), rgba(255, 255, 255, 0.2));
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skills-category:hover::before {
+  opacity: 1;
+}
+
+.category-title {
+  font-size: 1.75rem;
+  color: #1e90ff; /* Accent color for category titles */
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #333; /* Dark text for readability */
+  position: relative;
+  z-index: 1;
+}
+
+.skills-list li svg {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  color: #333; /* Consistent color for icons */
+}
+
+.skills-list li:hover {
+  background: linear-gradient(145deg, #1e90ff, #ffffff); /* Gradient background on hover */
+  color: #fff; /* White text for contrast */
+}
+
+.skills-list li:hover svg {
+  color: #fff; /* Icon color change on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}

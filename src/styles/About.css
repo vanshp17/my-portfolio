@@ -1,0 +1,65 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  background-color: #F7F7FB; /* Slightly soft off-white background color */
+  position: relative;
+  justify-content: center;
+  height: 80vh;
+  align-items: flex-start;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.about-image img {
+  width: 320px; /* Image width */
+  height: 320px; /* Image height */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Maintain aspect ratio and cover */
+  /* border: 6px solid #1e90ff; Accent border color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow for a lifted effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.about-image img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}

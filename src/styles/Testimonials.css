@@ -1,0 +1,73 @@
+/* src/styles/Testimonials.css */
+.testimonials {
+  padding: 3rem;
+  background-color: #edf5fc; /* Light gray for a softer background */
+}
+
+.testimonials-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2C3E50; /* Dark color for titles */
+  margin-bottom: 1.5rem;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between testimonials */
+}
+
+.testimonial-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px; /* Slightly smaller width */
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 2px solid #1e90ff; /* Accent border */
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2C3E50; /* Consistent with title color */
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.5rem 0;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #555; /* Standard text color */
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column; /* Stack testimonials on smaller screens */
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 90%; /* Full width on smaller screens */
+  }
+}

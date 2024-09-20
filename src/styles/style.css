@@ -1,0 +1,73 @@
+/* Base styles for desktop */
+.hero {
+    background: url('../assets/images/bgimg1.jpg') no-repeat center center/cover;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .hero-content {
+    padding: 50px; /* Padding for larger screens */
+    color: white;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skill-list {
+    flex: 1 1 200px; /* Flexible width */
+    margin: 10px;
+  }
+  
+  .project-item {
+    flex: 1 1 300px; /* Minimum width for project items */
+    max-width: 100%;
+  }
+  
+  .project-item img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive styles for tablets */
+  @media (max-width: 1024px) {
+    .hero-content {
+      padding: 30px; /* Adjust padding */
+    }
+  
+    .projects {
+      flex-direction: column; /* Stack projects vertically */
+    }
+  }
+  
+  /* Responsive styles for mobile devices */
+  @media (max-width: 768px) {
+    .hero {
+      height: auto; /* Adjust height for smaller screens */
+      background-size: cover;
+    }
+  
+    .hero-content {
+      font-size: 16px; /* Smaller font size */
+      padding: 20px; /* Adjust padding */
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar-links {
+      display: none; /* Hide links by default */
+    }
+  
+    .navbar-toggle {
+      display: block; /* Show toggle button */
+    }
+  
+    .navbar.active .navbar-links {
+      display: flex; /* Show links when toggle is active */
+      flex-direction: column;
+    }
+  }
+  
