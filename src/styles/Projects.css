@@ -103,8 +103,14 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 48%; /* Two projects per row on smaller devices */
+  }
+}
+
 @media (max-width: 768px) {
   .project-card {
-    width: 100%;
+    width: 40%; /* Full width on mobile devices */
   }
 }

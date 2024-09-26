@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
-  background-color: #F7F7FB; /* Slightly soft off-white background color */
+  background-color: #F7F7FB;
   position: relative;
   justify-content: center;
-  height: 80vh;
   align-items: flex-start;
+
 }
 
 .about-content {
@@ -15,9 +15,8 @@
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Keeps text and image side by side */
   gap: 2rem;
-
 }
 
 .about-text {
@@ -50,16 +49,54 @@
 }
 
 .about-image img {
-  width: 320px; /* Image width */
-  height: 320px; /* Image height */
-  border-radius: 50%; /* Circular shape */
-  object-fit: cover; /* Maintain aspect ratio and cover */
-  /* border: 6px solid #1e90ff; Accent border color */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow for a lifted effect */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-image img:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet screens (between 768px and 1024px) */
+@media (max-width: 1024px) {
+  .about-content {
+    justify-content: center; /* Center content on tablet */
+  }
+
+  .about-title {
+    font-size: 2rem; /* Reduce title size */
+  }
+
+  .about-image img {
+    width: 280px; /* Slightly smaller image for tablet */
+    height: 280px;
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack content vertically on mobile */
+  }
+
+  .about-title {
+    font-size: 1.8rem; /* Smaller title on mobile */
+  }
+
+  .about-description {
+    font-size: 1rem; /* Reduce description font size */
+    line-height: 1.4;
+  }
+
+  .about-image img {
+    width: 200px; /* Smaller image for mobile */
+    height: 200px;
+  }
 }

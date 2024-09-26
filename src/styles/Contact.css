@@ -103,8 +103,39 @@ textarea {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-title {
+    font-size: 2rem; /* Adjust title size for tablets */
+  }
+
+  .contact-form {
+    padding: 2rem; /* Slightly reduced padding */
+  }
+
+  .contact-submit {
+    font-size: 1rem; /* Smaller button font size */
+  }
+}
+
 @media (max-width: 768px) {
+  .contact-title {
+    font-size: 1.5rem; /* Further reduce title size for mobile */
+  }
+
   .contact-form {
     padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .form-group label {
+    font-size: 0.9rem; /* Smaller label font for mobile */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem; /* Smaller input font for mobile */
+  }
+
+  .contact-submit {
+    font-size: 1rem; /* Ensure button size is comfortable */
   }
 }

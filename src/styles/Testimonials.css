@@ -1,7 +1,8 @@
 /* src/styles/Testimonials.css */
 .testimonials {
   padding: 3rem;
-  background-color: #edf5fc; /* Light gray for a softer background */
+  background-color: #e9f0f6; /* Light gray for a softer background */
+  overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 .testimonials-title {
@@ -12,9 +13,7 @@
 }
 
 .testimonials-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex; /* Keep items in a single row */
   gap: 2rem; /* Space between testimonials */
 }
 
@@ -22,7 +21,7 @@
   background-color: #ffffff; /* White background for cards */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 280px; /* Slightly smaller width */
+  width: 280px; /* Fixed width for cards */
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -62,12 +61,11 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .testimonials-container {
-    flex-direction: column; /* Stack testimonials on smaller screens */
-    align-items: center;
+  .testimonials-title {
+    font-size: 2rem; /* Adjust title size for smaller screens */
   }
 
   .testimonial-card {
-    width: 90%; /* Full width on smaller screens */
+    width: 90%; /* Adjust width for mobile devices */
   }
 }

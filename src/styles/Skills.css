@@ -95,8 +95,37 @@
 }
 
 /* Responsive Design */
+
+/* Tablet and smaller devices */
+@media (max-width: 1024px) {
+  .skills {
+    padding: 2rem;
+  }
+
+  .skills-title {
+    font-size: 2rem; /* Smaller title for better fit on tablets */
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr 1fr; /* Adjusts to 2 columns for tablets */
+    grid-gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+    grid-template-columns: 1fr 1fr; /* Single column on smaller screens */
+  }
+
+  .skills-category {
+    padding: 1rem; /* Adjust padding for smaller devices */
+  }
+
+  .category-title {
+    font-size: 1.5rem; /* Slightly smaller title for mobile */
+  }
+
+  .skills-list li {
+    font-size: 1rem; /* Smaller font size for mobile devices */
   }
 }
