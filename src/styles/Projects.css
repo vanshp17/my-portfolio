@@ -1,4 +1,4 @@
- .projects {
+.projects {
   padding: 2rem;
   background-color: #f0f4f8; /* Lighter background for a fresh look */
 }
@@ -67,15 +67,57 @@
 .project-detail {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centering the content horizontally */
+  padding: 2rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  margin: 2rem auto; /* Centering the container */
+  max-width: 800px;
+}
+
+.project-detail h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.project-detail h4 {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-top: 1rem;
+}
+
+.project-detail p,
+.project-detail ol,
+.project-detail ul {
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+  max-width: 100%;
+}
+
+.project-detail ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.project-detail ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+}
+
+.project-detail li {
+  margin-bottom: 0.5rem;
 }
 
 .project-detail img {
-  width: 50%;
+  width: 60%;
   height: auto;
   border-radius: 15px; 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 1rem 0;
 }
 
 .project-detail img:hover {
@@ -83,21 +125,52 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); 
 }
 
-.project-detail h3 {
-  font-size: 1.5rem;
-  color: #333;
+/* Styling for Demo and GitHub links */
+.project-links {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
-.project-detail h4 {
-  font-size: 1.2rem;
-  color: #1e90ff;
-}
-
-.project-detail p {
+.project-links a {
+  background-color: #4995e1;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
   font-size: 1rem;
-  color: #555;
-  text-align: center;
-  max-width: 800px;
+  transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+  background-color: #1c86ee;
+}
+
+/* Responsive Design for Project Detail */
+@media (max-width: 768px) {
+  .project-detail img {
+    width: 100%;
+  }
+
+  .project-detail {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .project-detail h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-detail h4 {
+    font-size: 1.2rem;
+  }
+
+  .project-detail p,
+  .project-detail ol,
+  .project-detail ul {
+    font-size: 0.9rem;
+  }
 }
 
 /* Responsive Design */
@@ -109,6 +182,6 @@
 
 @media (max-width: 768px) {
   .project-card {
-    width: 40%; /* Full width on mobile devices */
+    width: 100%; /* Full width on mobile devices */
   }
 }
