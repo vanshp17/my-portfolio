@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0 20px;
   overflow: hidden;
 }
 
@@ -23,7 +22,7 @@
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1200px;
   z-index: 2;
   text-align: center;
   position: relative;
@@ -215,7 +214,7 @@
 @media (max-width: 768px) {
   .hero {
     height: 100vh;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     align-items: center;
   }
 
